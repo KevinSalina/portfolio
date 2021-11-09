@@ -33,39 +33,44 @@ const Container = ({ children }) => {
     position: sticky;
     z-index: 10;
     top: 0;
-    backdrop-filter: saturate(180%) blue(20px);
+    backdrop-filter: saturate(180%) blur(20px);
     transition: height .5s, line-height .5s
   `
 
   return (
-    <div>
+    <>
       <StickyNav
         flexDir='row'
-        justifyContent='space-between'
         alignItems='center'
-        maxW='3xl'
-        minWidth='356px'
+        // maxW='3xl'
+        // minWidth='356px'
         width='100%'
         as='nav'
         px={3}
         py={2}
-        mt={4}
-        mb={[0, 0, 4]}
         mx='auto'
       >
-        <Box>
-          <NextLink href="/" passHref>
-            <Button as='a' variant='ghost' p={[1, 2, 4]} _hover={{ bgColor: navHoverBg[colorMode] }}>
-              Home
-            </Button>
-          </NextLink>
-          <NextLink href="/projects" passHref>
-            <Button as='a' variant='ghost' p={[1, 2, 4]} _hover={{ bgColor: navHoverBg[colorMode] }}>
-              Projects
-            </Button>
-          </NextLink>
-        </Box>
-        <DarkModeSwitch />
+        <Flex
+          width='full'
+          maxW='3xl'
+          mx='auto'
+          justifyContent='space-between'
+          py={2}
+        >
+          <Flex>
+            <NextLink href="/" passHref>
+              <Button as='a' variant='ghost' p={[1, 2, 4]} _hover={{ bgColor: navHoverBg[colorMode] }}>
+                Home
+              </Button>
+            </NextLink>
+            <NextLink href="/projects" passHref>
+              <Button as='a' variant='ghost' p={[1, 2, 4]} _hover={{ bgColor: navHoverBg[colorMode] }}>
+                Projects
+              </Button>
+            </NextLink>
+          </Flex>
+          <DarkModeSwitch />
+        </Flex>
       </StickyNav>
       <Flex
         as='main'
@@ -78,8 +83,7 @@ const Container = ({ children }) => {
       >
         {children}
       </Flex>
-
-    </div>
+    </>
   )
 }
 

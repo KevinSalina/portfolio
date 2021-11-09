@@ -1,5 +1,4 @@
 import Head from 'next/head'
-
 import {
   Stack,
   Flex,
@@ -9,6 +8,8 @@ import {
 
 import DarkModeSwitch from '../components/DarkModeSwitch'
 import Container from '../components/Container'
+import Hero from '../components/Hero'
+import AboutMe from '../components/AboutMe'
 
 export default function Home() {
   return (
@@ -18,22 +19,15 @@ export default function Home() {
       </Head>
       <Stack
         as='main'
-        spacing={8}
+        spacing={0}
         justifyContent='center'
         alignItems='flex-start'
         m='0 auto 4rem auto'
         maxW='3xl'
         px={2}
       >
-        <Flex
-          direction='column'
-          justifyContent='flex-start'
-          alignItems='flex-start'
-          maxW='100%'
-        >
-          <Heading mb={2}>Hi, I&apos;m Kevin Salina</Heading>
-          <Text>I am a web and software developer. I love problem solving, and learning about new web technologies! I am skilled in JavaScript, Node, Express, MySQL, React, HTML, & CSS. I also love to golf, snowboard, and listen to great alternative rock music.</Text>
-        </Flex>
+        <Hero />
+        <AboutMe />
       </Stack>
     </Container>
   )
