@@ -12,6 +12,8 @@ import {
   Link,
   Button,
   Image,
+  LinkOverlay,
+  LinkBox,
   useColorMode,
   useColorModeValue
 } from '@chakra-ui/react'
@@ -32,6 +34,7 @@ const HomePageProjects = () => {
 
   const color = useColorModeValue('brand.300', 'brand.600')
   const bg = useColorModeValue('whiteHL.50', 'brand.600')
+  const seeAllColor = useColorModeValue('brand.800', 'white')
 
   const projectData = projects.slice(0, 3)
 
@@ -40,21 +43,26 @@ const HomePageProjects = () => {
       <VStack align='flex-start' spacing={3}>
         <Heading as='h2' fontWeight="medium">Projects</Heading>
         <NextLink href='/projects' passHref>
-          <Button variant='link' rightIcon={<HiArrowNarrowRight />}>See All</Button>
+          <Button variant='link' color={seeAllColor} rightIcon={<HiArrowNarrowRight />}>See All</Button>
         </NextLink>
         <Divider />
       </VStack>
       <VStack mt={8} spacing='5rem'>
         {projectData.map((project, i) => (
-          <Flex key={`project-${i}`}>
-            <Box w='60%' mr={3}>
-              <Image src={project.img} alt={`${project.name} Image`} borderRadius={10} />
+          <Flex key={`project-${i}`} direction={{ base: 'column', md: 'row' }}>
+            <Box w={{ base: 'full', md: '60%' }} mr={3}>
+              <LinkBox as='div' boxShadow='sm' transition='all .3s ease' _hover={{ boxShadow: 'lg', cursor: 'pointer', opacity: .8 }} >
+                <LinkOverlay href={project.demo} isExternal h='full'>
+                  <Image src={project.img} alt={`${project.title} image`} borderRadius={10} />
+                </LinkOverlay>
+              </LinkBox>
               <Text mt={1} fontSize='xs' fontWeight='light'>{project.note}</Text>
             </Box>
-            <VStack w='40%' alignItems='flex-end' spacing={3} pl={5}>
+            <VStack w={{ base: 'full', md: '40%' }} alignItems={{ base: 'flex-start', md: 'flex-end' }} spacing={3} pl={{ base: 0, md: 5 }}>
               <Heading
                 fontWeight='medium'
                 size='sm'
+                mt={{ base: 3, md: 0 }}
                 as={Link}
                 href={project.demo}
                 isExternal
