@@ -14,7 +14,7 @@ const GlobalStyle = ({ children }) => {
             transition: background .1s ease, color .1s ease;
           }
           ::selection {
-            background-color: #90CDF4;
+            background-color: #909dba;
             color: #fefefe;
           }
           ::-moz-selection {
@@ -29,7 +29,7 @@ const GlobalStyle = ({ children }) => {
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-            background: ${colorMode === 'light' ? 'white' : '#171717'};
+            background: ${colorMode === 'light' ? 'white' : '#1A202D'};
           }
         `}
       />

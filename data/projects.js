@@ -11,6 +11,20 @@ const projects = [
       'MySQL',
       'Material UI',
       'Twilio'
+    ],
+    note: 'Please allow 30 secs for app to load.'
+  },
+  {
+    title: 'Crypto App',
+    img: 'https://live.staticflickr.com/65535/51671175370_f202c154a1_h.jpg',
+    source: 'https://github.com/KevinSalina/react-crypto-dashboard',
+    demo: 'https://react-crypto-rho.vercel.app/',
+    description: 'An API-connected web app that displays top cryptocurrency data and news. Utilizes state managament with Redux Toolkit. Deployed on Vercel.',
+    tags: [
+      'Next JS',
+      'Rapid API',
+      'Chakra UI',
+      'Redux Toolkit'
     ]
   },
   {
@@ -18,14 +32,15 @@ const projects = [
     img: 'https://live.staticflickr.com/65535/51667837886_4451c634d7_h.jpg',
     source: 'https://github.com/KevinSalina/golfMap2021',
     demo: 'https://freegolf.net/course-map/',
-    description: 'Interactive map for Golfing Magazine website. Used web scrapping to gather golf course data and Mapbox SDK to build map. Deployed on Heroku and currently in use by Golfing Magazine',
+    description: 'Interactive map for Golfing Magazine website. Used web scrapping to gather golf course data and Mapbox SDK to build map. Deployed on Heroku and currently in use by Golfing Magazine.',
     tags: [
       'Node JS',
       'MongoDB',
       'Mapbox',
       'Cheerio',
       'Puppeteer'
-    ]
+    ],
+    note: 'Please allow 30 secs for app to load.'
   },
   {
     title: 'Baldwin Stables Website',
@@ -39,7 +54,8 @@ const projects = [
       'JavaScript',
       'Express',
       'Parallax'
-    ]
+    ],
+    note: 'Please allow 30 secs for app to load.'
   },
   {
     title: 'Web Calculator',

@@ -12,15 +12,16 @@ import {
   Link,
   Button,
   Image,
-  useColorMode
+  useColorMode,
+  useColorModeValue
 } from '@chakra-ui/react'
 import { AiFillGithub } from 'react-icons/ai'
 import { HiArrowNarrowRight } from 'react-icons/hi'
 import { FiExternalLink } from 'react-icons/fi'
 import NextLink from 'next/link'
-import projectData from '../data/projects'
+import projects from '../data/projects'
 
-const Projects = () => {
+const HomePageProjects = () => {
 
   const { colorMode } = useColorMode()
 
@@ -29,10 +30,10 @@ const Projects = () => {
     dark: 'gray.600'
   }
 
-  const tagBgColor = {
-    light: 'gray.200',
-    dark: 'gray.500'
-  }
+  const color = useColorModeValue('brand.300', 'brand.600')
+  const bg = useColorModeValue('whiteHL.50', 'brand.600')
+
+  const projectData = projects.slice(0, 3)
 
   return (
     <Box w='full'>
@@ -47,7 +48,8 @@ const Projects = () => {
         {projectData.map((project, i) => (
           <Flex key={`project-${i}`}>
             <Box w='60%' mr={3}>
-              <Image src={project.img} alt={`${project.name} Image`} borderRadius={10} h="full" />
+              <Image src={project.img} alt={`${project.name} Image`} borderRadius={10} />
+              <Text mt={1} fontSize='xs' fontWeight='light'>{project.note}</Text>
             </Box>
             <VStack w='40%' alignItems='flex-end' spacing={3} pl={5}>
               <Heading
@@ -61,10 +63,10 @@ const Projects = () => {
               </Heading>
               <HStack spacing={3}>
                 <Link href={project.source} isExternal>
-                  <Icon as={AiFillGithub} boxSize='1.5rem' _hover={{ color: iconHoverColor[colorMode] }} />
+                  <Icon as={AiFillGithub} boxSize='1.5rem' _hover={{ color }} />
                 </Link>
                 <Link href={project.demo} isExternal>
-                  <Icon as={FiExternalLink} boxSize='1.5rem' _hover={{ color: iconHoverColor[colorMode] }} />
+                  <Icon as={FiExternalLink} boxSize='1.5rem' _hover={{ color }} />
                 </Link>
               </HStack>
               <Text textAlign='justify' >{project.description}</Text>
@@ -75,7 +77,7 @@ const Projects = () => {
                     fontSize='xs'
                     p={1}
                     lineHeight='1.2'
-                    bgColor={tagBgColor[colorMode]}
+                    bg={bg}
                     ml={1}
                     mb={1}
                     borderRadius={5}
@@ -94,4 +96,4 @@ const Projects = () => {
   )
 }
 
-export default Projects
+export default HomePageProjects

@@ -6,6 +6,7 @@ import {
 } from '@chakra-ui/react'
 
 import Container from '../components/Container';
+import ProjectsGrid from '../components/ProjectsGrid';
 
 function projects(props) {
   return (
@@ -22,7 +23,7 @@ function projects(props) {
         maxW='3xl'
         px={2}
       >
-        Projects
+        <ProjectsGrid />
       </Flex>
     </Container>
   );

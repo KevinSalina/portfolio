@@ -10,7 +10,8 @@ import {
   Icon,
   Link,
   Button,
-  useColorMode
+  useColorMode,
+  useColorModeValue
 } from '@chakra-ui/react'
 import {
   AiFillLinkedin,
@@ -22,10 +23,8 @@ import { MdEmail } from 'react-icons/md'
 const Hero = () => {
   const { colorMode } = useColorMode()
 
-  const iconHoverColor = {
-    light: 'gray.300',
-    dark: 'gray.600'
-  }
+  const color = useColorModeValue('whiteHL.100', 'brand.600')
+  const bg = useColorModeValue('whiteHL.50', 'brand.700')
 
 
   return (
@@ -33,8 +32,8 @@ const Hero = () => {
       direction='column'
       align='center'
       width='full'
-      height='90vh'
-      pt='5%'
+      height='88vh'
+      pt='8vh'
     >
       <VStack justifyContent='center' align='center' width='full' mb={5}>
         <Image boxSize='175px' objectFit='cover' src='/images/Headshot.jpeg' alt='Kevin Salina Headshot' borderRadius='full' />
@@ -44,16 +43,16 @@ const Hero = () => {
       </VStack>
       <HStack mb={5} spacing={5}>
         <Link href='https://www.linkedin.com/in/kevinsalina25/' isExternal>
-          <Icon as={AiFillLinkedin} boxSize='2rem' _hover={{ color: iconHoverColor[colorMode] }} />
+          <Icon as={AiFillLinkedin} boxSize='2rem' _hover={{ color }} />
         </Link>
         <Link href='https://github.com/KevinSalina' isExternal>
-          <Icon as={AiFillGithub} boxSize='2rem' _hover={{ color: iconHoverColor[colorMode] }} />
+          <Icon as={AiFillGithub} boxSize='2rem' _hover={{ color }} />
         </Link>
         <Link href='mailto: kevin.salina25@gmail.com' isExternal>
-          <Icon as={MdEmail} boxSize='2rem' _hover={{ color: iconHoverColor[colorMode] }} />
+          <Icon as={MdEmail} boxSize='2rem' _hover={{ color }} />
         </Link>
       </HStack>
-      <Button as='a' href='https://www.linkedin.com/in/kevinsalina25/' target="_blank" rel="noopener noreferrer">
+      <Button as='a' bg={bg} _hover={{ bg: color }} href='https://www.linkedin.com/in/kevinsalina25/' target="_blank" rel="noopener noreferrer">
         Hire Me
       </Button>
     </Flex>
