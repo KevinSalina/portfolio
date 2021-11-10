@@ -4,12 +4,14 @@ import {
   Button,
   Flex,
   Box,
-  useColorModeValue
+  useColorModeValue,
+  IconButton
 } from '@chakra-ui/react'
 import NextLink from 'next/link'
 import styled from "@emotion/styled"
 
 import DarkModeSwitch from "./DarkModeSwitch"
+import Logo from "./Logo"
 
 const Navbar = () => {
 
@@ -44,19 +46,17 @@ const Navbar = () => {
         justifyContent='space-between'
         py={2}
       >
+        <NextLink href="/" passHref>
+          <IconButton bg='none' _active={{ bg: 'none' }} _hover={{ bg: 'none' }} icon={<Logo w='3rem' h='3rem' color={color} />} />
+        </NextLink>
         <Flex>
-          <NextLink href="/" passHref>
-            <Button as='a' variant='ghost' p={[1, 2, 4]} _hover={{ bg }} >
-              Home
-            </Button>
-          </NextLink>
           <NextLink href="/projects" passHref>
-            <Button as='a' variant='ghost' p={[1, 2, 4]} _hover={{ bg }}>
+            <Button as='a' variant='ghost' mr={[1, 2]} p={[1, 2, 4]} _hover={{ bg }}>
               Projects
             </Button>
           </NextLink>
+          <DarkModeSwitch />
         </Flex>
-        <DarkModeSwitch />
       </Flex>
     </StickyNav>
   )

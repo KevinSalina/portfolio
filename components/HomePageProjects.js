@@ -86,7 +86,8 @@ const HomePageProjects = () => {
                     p={1}
                     lineHeight='1.2'
                     bg={bg}
-                    ml={1}
+                    ml={{ base: 0, md: 1 }}
+                    mr={{ base: 1, md: 0 }}
                     mb={1}
                     borderRadius={5}
                     opacity='.8'
