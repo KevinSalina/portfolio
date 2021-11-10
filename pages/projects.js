@@ -1,21 +1,17 @@
+import React from 'react';
 import Head from 'next/head'
 import {
-  Stack,
-  Flex,
-  Heading,
-  Text
+  Text,
+  Flex
 } from '@chakra-ui/react'
 
-import Container from '../components/Container'
-import Hero from '../components/Hero'
-import AboutMe from '../components/AboutMe'
-import Projects from '../components/Projects'
+import Container from '../components/Container';
 
-export default function Home() {
+function projects(props) {
   return (
     <Container>
       <Head>
-        <title>Kevin Salina</title>
+        <title>Home - Kevin Salina</title>
       </Head>
       <Flex
         as='main'
@@ -26,10 +22,10 @@ export default function Home() {
         maxW='3xl'
         px={2}
       >
-        <Hero />
-        <AboutMe />
-        <Projects />
+        Projects
       </Flex>
     </Container>
-  )
+  );
 }
+
+export default projects;

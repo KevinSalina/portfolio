@@ -5,9 +5,6 @@ import {
   Text,
   SimpleGrid,
   Box,
-  GridItem,
-  HStack,
-  VStack,
   Icon
 } from '@chakra-ui/react'
 import {
@@ -29,8 +26,9 @@ import {
 
 
 const AboutMe = () => {
+
   return (
-    <Box>
+    <Box w='full' mb='100px'>
       <Heading mb={5} as='h2' fontWeight="medium">About Me</Heading>
       <Flex direction='column' alignItems='flex-start' w='full' mx='auto'>
         <Box mb={10}>
