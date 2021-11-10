@@ -43,7 +43,7 @@ function MyApp({ Component, pageProps }) {
     <ChakraProvider resetCSS theme={theme}>
       <ColorModeProvider
         options={{
-          initialColorMode: "light",
+          initialColorMode: 'dark',
           useSystemColorMode: false,
         }}
       >

@@ -12,7 +12,7 @@ function projects(props) {
   return (
     <Container>
       <Head>
-        <title>Home - Kevin Salina</title>
+        <title>Projects | Kevin Salina</title>
       </Head>
       <Flex
         as='main'

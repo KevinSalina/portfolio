@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <Container>
       <Head>
-        <title>Kevin Salina</title>
+        <title>Home | Kevin Salina</title>
       </Head>
       <Flex
         as='main'
