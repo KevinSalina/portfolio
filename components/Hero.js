@@ -60,17 +60,17 @@ const Hero = () => {
       <HStack mb={5} spacing={5}>
         <Animation direction='fromLeft' delay={iconDelay}>
           <Link href='https://www.linkedin.com/in/kevinsalina25/' isExternal>
-            <Icon as={AiFillLinkedin} boxSize='2rem' _hover={{ color }} />
+            <Icon as={AiFillLinkedin} boxSize='2rem' _hover={{ color }} transition='all .2s ease' />
           </Link>
         </Animation>
         <Animation direction='fromBottom' delay={iconDelay}>
           <Link href='https://github.com/KevinSalina' isExternal>
-            <Icon as={AiFillGithub} boxSize='2rem' _hover={{ color }} />
+            <Icon as={AiFillGithub} boxSize='2rem' _hover={{ color }} transition='all .2s ease' />
           </Link>
         </Animation>
         <Animation direction='fromRight' delay={iconDelay}>
           <Link href='mailto: kevin.salina25@gmail.com' isExternal>
-            <Icon as={MdEmail} boxSize='2rem' _hover={{ color }} />
+            <Icon as={MdEmail} boxSize='2rem' _hover={{ color }} transition='all .2s ease' />
           </Link>
         </Animation>
       </HStack>

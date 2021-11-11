@@ -37,7 +37,7 @@ const AboutMe = () => {
       <Flex direction='column' alignItems='flex-start' w='full' mx='auto'>
         <Animation direction="fromBottom">
           <Box mb={10}>
-            <Text>Hello there!  My name is Kevin Salina and I am an experienced Operations and Logistics Coordinator that decided to make a career change during the midst of the COVID-19 pandemic. I have spent the past year and a half evolving my passion for web development and recently graduated from a Web Development Bootcamp, where I learned how to build full-stack web apps from industry practitioners. I now hope to use these new skills along with my prior professional experience to launch a career building web applications and services! You can find some of my projects below. When I am not honing in my software engineering skills, I love to golf, snowboard, and listen to great alternative rock music.
+            <Text>Hello there!  My name is Kevin Salina and I am an experienced Operations and Logistics Coordinator that decided to make a career change during the midst of the COVID-19 pandemic. I have spent the past year and a half evolving my passion for web development and recently graduated from a Web Development Bootcamp, where I learned how to build full-stack web apps from industry practitioners. I now hope to use these new skills along with my prior professional experience to launch a career building web applications and services! You can find some of my projects below. When I am not honing in my software engineering skills, I love to golf, snowboard, and play the drums!
             </Text>
           </Box>
         </Animation>

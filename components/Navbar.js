@@ -56,6 +56,11 @@ const Navbar = () => {
           <IconButton bg='none' _active={{ bg: 'none' }} _hover={{ bg: 'none' }} icon={<Logo w='3rem' h='3rem' color={color} />} />
         </NextLink>
         <Flex>
+          <NextLink href="/resume" passHref>
+            <Button as='a' variant='ghost' mr={[2, 3]} p={[1, 2, 4]} _hover={{ bg }}>
+              Resume
+            </Button>
+          </NextLink>
           <NextLink href="/projects" passHref>
             <Button as='a' variant='ghost' mr={[2, 3]} p={[1, 2, 4]} _hover={{ bg }}>
               Projects
