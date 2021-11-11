@@ -17,19 +17,9 @@ export default function Home() {
       <Head>
         <title>Home | Kevin Salina</title>
       </Head>
-      <Flex
-        as='main'
-        direction='column'
-        justifyContent='center'
-        alignItems='flex-start'
-        m='0 auto 4rem auto'
-        maxW='3xl'
-        px={2}
-      >
-        <Hero />
-        <AboutMe />
-        <HomePageProjects />
-      </Flex>
+      <Hero />
+      <AboutMe />
+      <HomePageProjects />
     </Container>
   )
 }

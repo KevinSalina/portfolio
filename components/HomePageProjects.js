@@ -23,6 +23,8 @@ import { FiExternalLink } from 'react-icons/fi'
 import NextLink from 'next/link'
 import projects from '../data/projects'
 
+import Animation from './Animation'
+
 const HomePageProjects = () => {
 
   const { colorMode } = useColorMode()
@@ -49,55 +51,57 @@ const HomePageProjects = () => {
       </VStack>
       <VStack mt={8} spacing='5rem'>
         {projectData.map((project, i) => (
-          <Flex key={`project-${i}`} direction={{ base: 'column', md: 'row' }}>
-            <Box w={{ base: 'full', md: '60%' }} mr={3}>
-              <LinkBox as='div' boxShadow='sm' transition='all .3s ease' _hover={{ boxShadow: 'lg', cursor: 'pointer', opacity: .8 }} >
-                <LinkOverlay href={project.demo} isExternal h='full'>
-                  <Image src={project.img} alt={`${project.title} image`} borderRadius={10} />
-                </LinkOverlay>
-              </LinkBox>
-              <Text mt={1} fontSize='xs' fontWeight='light'>{project.note}</Text>
-            </Box>
-            <VStack w={{ base: 'full', md: '40%' }} alignItems={{ base: 'flex-start', md: 'flex-end' }} spacing={3} pl={{ base: 0, md: 5 }}>
-              <Heading
-                fontWeight='medium'
-                size='sm'
-                mt={{ base: 3, md: 0 }}
-                as={Link}
-                href={project.demo}
-                isExternal
-              >
-                {project.title}
-              </Heading>
-              <HStack spacing={3}>
-                <Link href={project.source} isExternal>
-                  <Icon as={AiFillGithub} boxSize='1.5rem' _hover={{ color }} />
-                </Link>
-                <Link href={project.demo} isExternal>
-                  <Icon as={FiExternalLink} boxSize='1.5rem' _hover={{ color }} />
-                </Link>
-              </HStack>
-              <Text textAlign='justify' >{project.description}</Text>
-              <Flex flexWrap='wrap' justifyContent='flex-end'>
-                {project.tags.map(tag => (
-                  <Text
-                    key={tag}
-                    fontSize='xs'
-                    p={1}
-                    lineHeight='1.2'
-                    bg={bg}
-                    ml={{ base: 0, md: 1 }}
-                    mr={{ base: 1, md: 0 }}
-                    mb={1}
-                    borderRadius={5}
-                    opacity='.8'
-                  >
-                    {tag}
-                  </Text>
-                ))}
-              </Flex>
-            </VStack>
-          </Flex>
+          <Animation key={i} direction='fromBottom'>
+            <Flex key={`project-${i}`} direction={{ base: 'column', md: 'row' }}>
+              <Box w={{ base: 'full', md: '60%' }} mr={3}>
+                <LinkBox as='div' boxShadow='sm' transition='all .3s ease' _hover={{ boxShadow: 'lg', cursor: 'pointer', opacity: .8 }} >
+                  <LinkOverlay href={project.demo} isExternal h='full'>
+                    <Image src={project.img} alt={`${project.title} image`} borderRadius={10} />
+                  </LinkOverlay>
+                </LinkBox>
+                <Text mt={1} fontSize='xs' fontWeight='light'>{project.note}</Text>
+              </Box>
+              <VStack w={{ base: 'full', md: '40%' }} alignItems={{ base: 'flex-start', md: 'flex-end' }} spacing={3} pl={{ base: 0, md: 5 }}>
+                <Heading
+                  fontWeight='medium'
+                  size='sm'
+                  mt={{ base: 3, md: 0 }}
+                  as={Link}
+                  href={project.demo}
+                  isExternal
+                >
+                  {project.title}
+                </Heading>
+                <HStack spacing={3}>
+                  <Link href={project.source} isExternal>
+                    <Icon as={AiFillGithub} boxSize='1.5rem' _hover={{ color }} />
+                  </Link>
+                  <Link href={project.demo} isExternal>
+                    <Icon as={FiExternalLink} boxSize='1.5rem' _hover={{ color }} />
+                  </Link>
+                </HStack>
+                <Text textAlign='justify' >{project.description}</Text>
+                <Flex flexWrap='wrap' justifyContent='flex-end'>
+                  {project.tags.map(tag => (
+                    <Text
+                      key={tag}
+                      fontSize='xs'
+                      p={1}
+                      lineHeight='1.2'
+                      bg={bg}
+                      ml={{ base: 0, md: 1 }}
+                      mr={{ base: 1, md: 0 }}
+                      mb={1}
+                      borderRadius={5}
+                      opacity='.8'
+                    >
+                      {tag}
+                    </Text>
+                  ))}
+                </Flex>
+              </VStack>
+            </Flex>
+          </Animation>
         ))}
       </VStack>
 

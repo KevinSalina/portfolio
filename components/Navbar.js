@@ -12,6 +12,7 @@ import styled from "@emotion/styled"
 
 import DarkModeSwitch from "./DarkModeSwitch"
 import Logo from "./Logo"
+import Animation from "./Animation"
 
 const Navbar = () => {
 
@@ -29,16 +30,21 @@ const Navbar = () => {
   const color = useColorModeValue('brand.800', 'white')
 
   return (
-    <StickyNav
+    <Flex
+      position='sticky'
+      zIndex='10'
+      top='0'
+      backdropFilter='blur(20px)'
       flexDir='row'
       alignItems='center'
       width='100%'
       as='nav'
-      px={3}
+      px={8}
       py={2}
       mx='auto'
       color={color}
     >
+      {/* <Animation direction='fromTop' w='100%'> */}
       <Flex
         width='full'
         maxW='3xl'
@@ -58,7 +64,8 @@ const Navbar = () => {
           <DarkModeSwitch />
         </Flex>
       </Flex>
-    </StickyNav>
+      {/* </Animation> */}
+    </Flex>
   )
 }
 

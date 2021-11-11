@@ -14,17 +14,7 @@ function projects(props) {
       <Head>
         <title>Projects | Kevin Salina</title>
       </Head>
-      <Flex
-        as='main'
-        direction='column'
-        justifyContent='center'
-        alignItems='flex-start'
-        m='0 auto 4rem auto'
-        maxW='3xl'
-        px={2}
-      >
-        <ProjectsGrid />
-      </Flex>
+      <ProjectsGrid />
     </Container>
   );
 }

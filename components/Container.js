@@ -2,6 +2,7 @@ import React from "react"
 import {
   useColorMode,
   Flex,
+  Box
 } from '@chakra-ui/react'
 
 import Navbar from "./Navbar"
@@ -9,32 +10,24 @@ import Footer from "./Footer"
 
 const Container = ({ children }) => {
 
-  const { colorMode } = useColorMode()
-
-  const bgColor = {
-    light: 'white',
-    dark: 'brand.800'
-  }
-
-  const color = {
-    light: 'brand.800',
-    dark: 'white'
-  }
-
   return (
     <>
       <Navbar />
-      <Flex
+      <Box
         as='main'
-        justifyContent='center'
-        flexDirection='column'
-        // bg={bgColor[colorMode]}
-        color={color[colorMode]}
-        px={[0, 4, 4]}
-        mt={[4, 8, 8]}
+        px={8}
       >
-        {children}
-      </Flex>
+        <Flex
+          justifyContent='center'
+          flexDirection='column'
+
+          mt={[4, 8, 8]}
+          maxW='3xl'
+          m='0 auto 4rem auto'
+        >
+          {children}
+        </Flex>
+      </Box>
       <Footer />
     </>
   )
