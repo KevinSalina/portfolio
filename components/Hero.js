@@ -51,7 +51,7 @@ const Hero = () => {
           <Text fontSize='3xl' fontWeight='hairline'>Hello! My Name is</Text>
         </Animation>
         <Animation direction='fromBottom' delay={nameDelay}>
-          <Heading as='h1' size='4xl' mb={2}>Kevin Salina</Heading>
+          <Heading as='h1' size="3xl" mb={2}>Kevin Salina</Heading>
         </Animation>
         <Animation direction='fromBottom' delay={textTwoDelay}>
           <Text fontSize='xl' fontWeight='light'>I am a Full Stack Web Developer</Text>

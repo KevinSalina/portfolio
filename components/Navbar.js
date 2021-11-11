@@ -39,7 +39,7 @@ const Navbar = () => {
       alignItems='center'
       width='100%'
       as='nav'
-      px={8}
+      px={6}
       py={2}
       mx='auto'
       color={color}
@@ -57,7 +57,7 @@ const Navbar = () => {
         </NextLink>
         <Flex>
           <NextLink href="/projects" passHref>
-            <Button as='a' variant='ghost' mr={[1, 2]} p={[1, 2, 4]} _hover={{ bg }}>
+            <Button as='a' variant='ghost' mr={[2, 3]} p={[1, 2, 4]} _hover={{ bg }}>
               Projects
             </Button>
           </NextLink>

@@ -15,7 +15,7 @@ const Container = ({ children }) => {
       <Navbar />
       <Box
         as='main'
-        px={8}
+        px={6}
       >
         <Flex
           justifyContent='center'
