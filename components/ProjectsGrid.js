@@ -40,7 +40,7 @@ const ProjectsGrid = () => {
         {projects.map((project, i) => (
           <GridItem key={`project-${i}`} colSpan={1} rowSpan={2}>
             <VStack align='flex-start' w='full' direction='column' spacing={4} mb={4}>
-              <LinkBox as='div' boxShadow='sm' transition='all .3s ease' _hover={{ boxShadow: 'lg', cursor: 'pointer', opacity: .8 }} >
+              <LinkBox borderRadius={10} as='div' boxShadow='sm' transition='all .3s ease' _hover={{ boxShadow: 'lg', cursor: 'pointer', opacity: .8 }} >
                 <LinkOverlay href={project.demo} isExternal h='full'>
                   <Image src={project.img} alt={`${project.title} image`} borderRadius={10} />
                 </LinkOverlay>

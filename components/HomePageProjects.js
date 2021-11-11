@@ -54,7 +54,7 @@ const HomePageProjects = () => {
           <Animation key={i} direction='fromBottom'>
             <Flex key={`project-${i}`} direction={{ base: 'column', md: 'row' }}>
               <Box w={{ base: 'full', md: '60%' }} mr={3}>
-                <LinkBox as='div' boxShadow='sm' transition='all .3s ease' _hover={{ boxShadow: 'lg', cursor: 'pointer', opacity: .8 }} >
+                <LinkBox borderRadius={10} as='div' boxShadow='sm' transition='all .3s ease' _hover={{ boxShadow: 'lg', cursor: 'pointer', opacity: .8 }} >
                   <LinkOverlay href={project.demo} isExternal h='full'>
                     <Image src={project.img} alt={`${project.title} image`} borderRadius={10} />
                   </LinkOverlay>
